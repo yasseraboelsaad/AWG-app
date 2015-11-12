@@ -11,14 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151112210059) do
-
-  create_table "awgs", force: :cascade do |t|
-    t.string   "title"
-    t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
+ActiveRecord::Schema.define(version: 20151112210452) do
 
   create_table "committees", force: :cascade do |t|
     t.string   "title"
@@ -32,7 +25,7 @@ ActiveRecord::Schema.define(version: 20151112210059) do
     t.text     "description"
     t.string   "committee"
     t.string   "place"
-    t.integer  "creator"
+    t.string   "creator"
     t.integer  "privacy"
     t.datetime "time"
     t.datetime "endtime"
@@ -40,6 +33,7 @@ ActiveRecord::Schema.define(version: 20151112210059) do
     t.datetime "updated_at",  null: false
   end
 
+<<<<<<< HEAD
   create_table "tasks", force: :cascade do |t|
     t.string   "title"
     t.string   "description"
@@ -47,6 +41,12 @@ ActiveRecord::Schema.define(version: 20151112210059) do
     t.integer  "assignee"
     t.string   "status"
     t.datetime "deadline"
+=======
+  create_table "messages", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "sender_id"
+    t.integer  "reciever_id"
+>>>>>>> origin/master
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
