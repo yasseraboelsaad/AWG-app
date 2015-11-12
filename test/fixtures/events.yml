@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  committee: MyString
+  place: MyString
+  creator: MyString
+  privacy: 1
+  time: 2015-11-12 22:22:01
+  endtime: 2015-11-12 22:22:01
+
+two:
+  title: MyString
+  description: MyText
+  committee: MyString
+  place: MyString
+  creator: MyString
+  privacy: 1
+  time: 2015-11-12 22:22:01
+  endtime: 2015-11-12 22:22:01
