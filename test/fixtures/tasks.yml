@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyString
+  assigner: 1
+  assignee: 1
+  status: MyString
+  deadline: 2015-11-12 22:52:55
+
+two:
+  title: MyString
+  description: MyString
+  assigner: 1
+  assignee: 1
+  status: MyString
+  deadline: 2015-11-12 22:52:55
