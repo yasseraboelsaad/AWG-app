@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20151112203216) do
+ActiveRecord::Schema.define(version: 20151112210452) do
 
   create_table "committees", force: :cascade do |t|
     t.string   "title"
@@ -20,9 +19,6 @@ ActiveRecord::Schema.define(version: 20151112203216) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
-
-
-ActiveRecord::Schema.define(version: 20151112202448) do
 
   create_table "events", force: :cascade do |t|
     t.string   "title"
@@ -33,6 +29,14 @@ ActiveRecord::Schema.define(version: 20151112202448) do
     t.integer  "privacy"
     t.datetime "time"
     t.datetime "endtime"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "sender_id"
+    t.integer  "reciever_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
