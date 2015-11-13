@@ -7,4 +7,5 @@ class Event < ActiveRecord::Base
       errors.add(:endtime, "End time cant be before the start time")
     end
   end
+
 end
