@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-	belongs_to :creator, :class_name => 'user', :foreign_key => 'user_id'
+	belongs_to :creator, :class_name => 'User', :foreign_key => 'user_id'
 	before_create :end_date_cant_be_before_start_date
 
 	def end_date_cant_be_before_start_date
