@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 20151112210452) do
     t.string   "lname"
     t.date     "dateOfBirth"
     t.string   "country"
+    t.string   "committee"
     t.string   "city"
     t.string   "gender"
     t.datetime "created_at",                          null: false

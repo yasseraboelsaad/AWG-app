@@ -34,6 +34,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :lname
       t.date :dateOfBirth
       t.string :country
+      t.string :committee
       t.string :city
       t.string :gender
 
