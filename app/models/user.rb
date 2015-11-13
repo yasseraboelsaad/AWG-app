@@ -10,4 +10,5 @@ class User < ActiveRecord::Base
   has_many :assigned_tasks_to, :class_name => 'Task', :foreign_key => 'assigner_id'
   has_many :host, :class_name => 'Event', :foreign_key => 'user_id'
   has_many :joined_awgs, :class_name => 'Awg', :foreign_key => 'awg_id'
+
 end
