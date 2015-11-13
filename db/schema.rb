@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20151112210452) do
     t.text     "description"
     t.string   "committee"
     t.string   "place"
-    t.integer  "creator"
+    t.integer  "user_id"
     t.integer  "privacy"
     t.datetime "time"
     t.datetime "endtime"
@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(version: 20151112210452) do
   create_table "tasks", force: :cascade do |t|
     t.string   "title"
     t.string   "description"
-    t.integer  "assigner"
-    t.integer  "assignee"
+    t.integer  "assigner_id"
+    t.integer  "assignee_id"
     t.string   "status"
     t.datetime "deadline"
     t.datetime "created_at",  null: false

@@ -5,8 +5,7 @@ class CreateEvents < ActiveRecord::Migration
       t.text :description
       t.string :committee
       t.string :place
-      t.integer :creator
-      t.foreign_key :creator
+      t.belongs_to :user
       t.integer :privacy
       t.datetime :time
       t.datetime :endtime
