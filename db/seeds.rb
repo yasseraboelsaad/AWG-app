@@ -11,7 +11,7 @@ User.create(fname: 'karim',email: 'karim@gmail.com', password: '12345678', passw
 User.create(fname: 'Ahmed',email: 'ahmed@gmail.com', password: '87654321', password_confirmation: '87654321')
 User.create(fname: 'Yasser',email: 'Yasser@gmail.com', password: '13131313', password_confirmation: '13131313')
 User.create(fname: 'Mohamed', email: 'Mohamed@gmail.com', password: 'abcdefjhi',password_confirmation:'abcdefjhi')
-User.create(fname: 'Sherif', email:'sherif@gmail.com', password: 'testtest', password_confirmation: 'testtest)
+User.create(fname: 'Sherif', email:'sherif@gmail.com', password: 'testtest', password_confirmation: 'testtest')
 
 Task.create(title: 'Create evaluation DB', assignee_id: 2 , assigner_id: 1)
 Task.create(title: 'Fix conflicts', assignee_id: 2 , assigner_id: 1)

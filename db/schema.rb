@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151112210452) do
+ActiveRecord::Schema.define(version: 20151114083312) do
+
+  create_table "active_working_groups", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "active_working_groups_users", id: false, force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "active_working_group_id"
+  end
+
+  add_index "active_working_groups_users", ["active_working_group_id"], name: "index_active_working_groups_users_on_active_working_group_id"
+  add_index "active_working_groups_users", ["user_id"], name: "index_active_working_groups_users_on_user_id"
 
   create_table "events", force: :cascade do |t|
     t.string   "title"
