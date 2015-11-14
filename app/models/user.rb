@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
   #validate :date_of_birth_cant_be_future
   has_and_belongs_to_many :active_working_groups
   has_many :sent_messages, :class_name => 'Message', :foreign_key => 'sender_id'
@@ -17,7 +18,6 @@ class User < ActiveRecord::Base
   def full_name
       [fname, lname].join(' ')
   end
- 
 
   def date_of_birth_cant_be_future
     if dateOfBirth > Date.today
@@ -26,5 +26,4 @@ class User < ActiveRecord::Base
   end
 
 scope:get_members,lambda{|query| where(["committee LIKE ?","%#{query}%"])}
-
 end
