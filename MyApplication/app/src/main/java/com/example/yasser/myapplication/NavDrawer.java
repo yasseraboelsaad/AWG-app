@@ -78,6 +78,8 @@ public class NavDrawer extends AppCompatActivity
             startActivity(new Intent("android.intent.action.Calendar"));
         } else if (id == R.id.nav_tasks) {
             startActivity(new Intent("android.intent.action.Tasks"));
+        } else if (id == R.id.nav_profile) {
+            startActivity(new Intent("android.intent.action.profile"));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
