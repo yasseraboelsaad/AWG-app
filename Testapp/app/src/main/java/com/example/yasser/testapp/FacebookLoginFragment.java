@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.facebook.AccessToken;
@@ -40,6 +41,7 @@ public class FacebookLoginFragment extends Fragment {
     private TextView mTextDetails;
     ArrayAdapter<String> mForecastAdapter;
     private CallbackManager mCallbackManager;
+    Button redirect;
 
     private FacebookCallback<LoginResult> mCallback = new FacebookCallback<LoginResult>() {
         @Override
@@ -52,6 +54,9 @@ public class FacebookLoginFragment extends Fragment {
                 mTextDetails.setText("Welcome   " + profile.getFirstName());
 
             }
+            startActivity(new Intent("android.intent.action.main2"));
+
+
 
         }
 
@@ -75,6 +80,7 @@ public class FacebookLoginFragment extends Fragment {
         // Initialize the SDK before executing any other operations,
         // especially, if you're using Facebook UI elements.
         mCallbackManager = CallbackManager.Factory.create();
+
     }
 
     public void onViewCreated(View view, Bundle savedInstanceState)
@@ -84,6 +90,7 @@ public class FacebookLoginFragment extends Fragment {
         loginButton.setReadPermissions("user_friends");
         loginButton.setFragment(this);
         loginButton.registerCallback(mCallbackManager,mCallback);
+
 
     }
 
