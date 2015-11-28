@@ -17,7 +17,7 @@ public class FacebookLogin extends ActionBarActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        
+
     }
 
 }

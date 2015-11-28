@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
 
-        ObjectDrawerItem[] drawerItem = new ObjectDrawerItem[8];
+        ObjectDrawerItem[] drawerItem = new ObjectDrawerItem[9];
 
         drawerItem[0] = new ObjectDrawerItem(R.drawable.ic_task, "Tasks");
         drawerItem[1] = new ObjectDrawerItem(R.drawable.ic_calendar, "Calendar");
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         drawerItem[5] = new ObjectDrawerItem(R.drawable.ic_committee, "My Committee");
         drawerItem[6] = new ObjectDrawerItem(R.drawable.ic_profile, "My Profile");
         drawerItem[7] = new ObjectDrawerItem(R.drawable.ic_timeline, "My TimeLine");
+        drawerItem[8] = new ObjectDrawerItem(R.drawable.ic_settings, "Settings");
 
         DrawerItemCustomAdapter adapter = new DrawerItemCustomAdapter(this, R.layout.listview_item_row, drawerItem);
 
@@ -184,6 +185,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 7:
                 fragment = new Timeline();
+                break;
+            case 8:
+                fragment = new settings();
                 break;
 
             default:
