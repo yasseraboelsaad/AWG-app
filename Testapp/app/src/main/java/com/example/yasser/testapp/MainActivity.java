@@ -19,8 +19,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity {
     private String[] mNavigationDrawerItemTitles;
     private DrawerLayout mDrawerLayout;
@@ -28,11 +26,6 @@ public class MainActivity extends AppCompatActivity {
     ActionBarDrawerToggle mDrawerToggle;
     private CharSequence mDrawerTitle;
     private CharSequence mTitle;
-    // Used to hold all the user posts
-    // Allows the user to post offline
-    static private ArrayList<String> posts = new ArrayList<String>();
-
-
 
 
     @Override
@@ -44,11 +37,6 @@ public class MainActivity extends AppCompatActivity {
         posts.add("Batman - have fullfiled a Task\n\"Finalize the presentation\".");
 
         setContentView(R.layout.activity_main);
-
-        // intialising bundle to carry data between timeline and posts
-        Bundle bundle = new Bundle();
-        bundle.putStringArrayList("posts",posts);
-
 
         mTitle = mDrawerTitle = getTitle();
         mNavigationDrawerItemTitles= getResources().getStringArray(R.array.navigation_drawer_items_array);
@@ -101,27 +89,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         FragmentManager fragmentManager = getFragmentManager();
-        Fragment temp = new Timeline();
-        temp.setArguments(bundle);
-        fragmentManager.beginTransaction().replace(R.id.content_frame, temp).commit();
+        fragmentManager.beginTransaction().replace(R.id.content_frame, new Timeline()).commit();
 
         mDrawerList.setItemChecked(7, true);
         mDrawerList.setSelection(7);
         setTitle(mNavigationDrawerItemTitles[7]);
         mDrawerLayout.closeDrawer(mDrawerList);
 
-        //this.posts = new ArrayList<String>();
-
     }
-
-    public static void setPosts(ArrayList<String> post) {
-        MainActivity.posts = posts;
-    }
-
-    public static ArrayList<String> getPosts() {
-        return MainActivity.posts;
-    }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -190,45 +165,34 @@ public class MainActivity extends AppCompatActivity {
     private void selectItem(int position) {
 
         Fragment fragment = null;
-        Bundle bundle = new Bundle();
-        bundle.putStringArrayList("posts",posts);
 
         switch (position) {
             case 0:
                 fragment = new Tasks();
-                fragment.setArguments(bundle);
                 break;
             case 1:
                 fragment = new Calendar();
-                fragment.setArguments(bundle);
                 break;
             case 2:
                 fragment = new Messages();
-                fragment.setArguments(bundle);
                 break;
             case 3:
                 fragment = new Events();
-                fragment.setArguments(bundle);
                 break;
             case 4:
                 fragment = new AWGs();
-                fragment.setArguments(bundle);
                 break;
             case 5:
                 fragment = new Committee();
-                fragment.setArguments(bundle);
                 break;
             case 6:
                 fragment = new profile();
-                fragment.setArguments(bundle);
                 break;
             case 7:
                 fragment = new Timeline();
-                fragment.setArguments(bundle);
                 break;
             case 8:
                 fragment = new settings();
-                fragment.setArguments(bundle);
                 break;
 
             default:

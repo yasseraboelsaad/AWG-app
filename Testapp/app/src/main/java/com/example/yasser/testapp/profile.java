@@ -3,13 +3,10 @@ package com.example.yasser.testapp;
 import android.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 
 import java.lang.reflect.Array;
@@ -17,14 +14,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class profile extends Fragment implements View.OnClickListener {
+public class profile extends Fragment {
 
-    public String passable;
-    Button post;
-    EditText postBox;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
 
         View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
 
@@ -46,11 +39,6 @@ public class profile extends Fragment implements View.OnClickListener {
         lv.setTextFilterEnabled(true);
         lv.setAdapter(myarrayAdapter);
         myarrayAdapter.notifyDataSetChanged();
-
-       // post = (Button) this.getActivity().findViewById(R.id.postBtn);
-        //post.setOnClickListener(this);
-
-        //postBox = (EditText)this.getView().findViewById(R.id.postBox);
 
         return rootView;
     }
@@ -87,4 +75,5 @@ public class profile extends Fragment implements View.OnClickListener {
             }*/
         }
     }
+
 }
