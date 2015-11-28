@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,23 +9,62 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.yasser.myapplication.Profile">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView2"
-        android:src="@drawable/batdroid"
-        android:layout_alignParentTop="true"
-        android:maxHeight="50dp"
-        android:maxWidth="10dp"
-        android:minHeight="10dp"
-        android:minWidth="50dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView2"
+        android:layout_gravity="center" >
 
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/list"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/imageView2"
-        android:layout_toEndOf="@+id/imageView2" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="800dp">
 
-</RelativeLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:layout_gravity="left|top"
+                android:src="@drawable/batdroid" />
+
+            <ListView
+                android:layout_width="299dp"
+                android:layout_height="235dp"
+                android:id="@+id/list"
+                android:layout_gravity="right|top" />
+
+        </FrameLayout>
+    </ScrollView>
+
+    <TableLayout
+        android:layout_width="299dp"
+        android:layout_height="132dp"
+        android:layout_gravity="center_horizontal|bottom">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText"
+                android:text="Write a Post!"
+                android:layout_column="2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Post"
+                android:id="@+id/button"
+                android:layout_column="2" />
+        </TableRow>
+
+    </TableLayout>
+
+</FrameLayout>

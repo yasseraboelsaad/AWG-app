@@ -22,21 +22,18 @@ public class profile extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
 
         String[] data = {
-                "First Name: Batman",
-                "Last Name: - ",
+                "First Name: Bat",
+                "Last Name: man",
                 "email: batman@batcave.com",
                 "Country: USA",
                 "City: Gotham",
-                "Gender: Male"
+                "Gender: Male",
+                "Date of Birth: 16/5/1984"
         };
         ArrayList<String >userData = new ArrayList<String>(Arrays.asList(data));
-        //ListView lv = (ListView)findViewById(R.id.list);
-        //ArrayAdapter<String> myarrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, userData);
-        //lv.setAdapter(myarrayAdapter);
-        //lv.setTextFilterEnabled(true);
+
 
         ListView lv = (ListView)rootView.findViewById(R.id.list);
-        //List<String> myList = Arrays.asList("First Name", "Last Name", "email", "Country", "City", "Gender");
         ArrayAdapter<String> myarrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, userData);
         lv.setAdapter(myarrayAdapter);
         lv.setTextFilterEnabled(true);
