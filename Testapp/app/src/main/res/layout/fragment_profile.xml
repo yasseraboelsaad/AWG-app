@@ -47,7 +47,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/postBox"
+                android:id="@+id/editText"
                 android:text="Write a Post!"
                 android:layout_column="2" />
         </TableRow>
@@ -61,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Post"
-                android:id="@+id/postBtn"
+                android:id="@+id/button"
                 android:layout_column="2" />
         </TableRow>
 
