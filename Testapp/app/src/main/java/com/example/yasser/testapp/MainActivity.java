@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         // adding intial posts to timeLine
-        posts.add("Ali has Assigned a task \"Do a market research\" to you to be fullfiled on the 2nd of december");
-        posts.add("You have fullfiled a Task\"Finalize the presentation\".");
+        posts.add("Ali -  Assigned a task \n\"Do a market research to you to be fullfiled on the 2nd of december\"");
+        posts.add("Batman - have fullfiled a Task\n\"Finalize the presentation\".");
 
         setContentView(R.layout.activity_main);
 

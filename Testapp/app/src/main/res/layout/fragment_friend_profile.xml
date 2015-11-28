@@ -25,18 +25,28 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/imageView"
                 android:layout_gravity="left|top"
-                android:src="@drawable/batdroid" />
+                android:src="@drawable/friend"
+                android:adjustViewBounds="true"
+                android:paddingBottom="80dp" />
 
             <ListView
                 android:layout_width="299dp"
-                android:layout_height="157dp"
-                android:id="@+id/list"
+                android:layout_height="103dp"
+                android:id="@+id/friendInfo"
                 android:layout_gravity="right|top" />
 
-            <ExpandableListView
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="47dp"
+                android:layout_height="wrap_content"
+                android:text="remove"
+                android:id="@+id/removeFriend"
+                android:layout_gravity="left|center_vertical" />
+
+            <ListView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/expandableListView"
+                android:id="@+id/postsOnFriend"
                 android:layout_gravity="center_horizontal|bottom" />
 
         </FrameLayout>
@@ -68,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Post"
-                android:id="@+id/postBtn"
+                android:id="@+id/postBtnFriend"
                 android:layout_column="2" />
         </TableRow>
 
