@@ -40,14 +40,14 @@ public class MainActivity extends AppCompatActivity {
 
         ObjectDrawerItem[] drawerItem = new ObjectDrawerItem[8];
 
-        drawerItem[0] = new ObjectDrawerItem(R.drawable.ic_copy, "Tasks");
-        drawerItem[1] = new ObjectDrawerItem(R.drawable.ic_refresh, "Calendar");
-        drawerItem[2] = new ObjectDrawerItem(R.drawable.ic_share, "Messages");
-        drawerItem[3] = new ObjectDrawerItem(R.drawable.ic_copy, "Events");
-        drawerItem[4] = new ObjectDrawerItem(R.drawable.ic_refresh, "AWGs");
-        drawerItem[5] = new ObjectDrawerItem(R.drawable.ic_share, "My Committee");
-        drawerItem[6] = new ObjectDrawerItem(R.drawable.ic_copy, "My Profile");
-        drawerItem[7] = new ObjectDrawerItem(R.drawable.ic_refresh, "My TimeLine");
+        drawerItem[0] = new ObjectDrawerItem(R.drawable.ic_task, "Tasks");
+        drawerItem[1] = new ObjectDrawerItem(R.drawable.ic_calendar, "Calendar");
+        drawerItem[2] = new ObjectDrawerItem(R.drawable.ic_message, "Messages");
+        drawerItem[3] = new ObjectDrawerItem(R.drawable.ic_events, "Events");
+        drawerItem[4] = new ObjectDrawerItem(R.drawable.ic_awg, "AWGs");
+        drawerItem[5] = new ObjectDrawerItem(R.drawable.ic_committee, "My Committee");
+        drawerItem[6] = new ObjectDrawerItem(R.drawable.ic_profile, "My Profile");
+        drawerItem[7] = new ObjectDrawerItem(R.drawable.ic_timeline, "My TimeLine");
 
         DrawerItemCustomAdapter adapter = new DrawerItemCustomAdapter(this, R.layout.listview_item_row, drawerItem);
 
