@@ -4,7 +4,9 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -20,6 +22,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.util.Base64;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -32,6 +36,8 @@ import android.widget.TextView;
 
 import com.example.yasser.testapp.R;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,7 +53,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      */
     private static final int REQUEST_READ_CONTACTS = 0;
     Button button4;
-
+    Button fbButton;
     /**
      * A dummy authentication store containing known user names and passwords.
      * TODO: remove after connecting to a real authentication system.
@@ -72,6 +78,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         setContentView(R.layout.activity_login);
         button4 = (Button)findViewById(R.id.button4);
         button4.setOnClickListener(this);
+        fbButton = (Button) findViewById(R.id.fbLogin);
+        fbButton.setOnClickListener(this);
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
@@ -98,6 +106,26 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+        printHashKey();
+    }
+
+    public void printHashKey()
+    {
+        try {
+            PackageInfo info = getPackageManager().getPackageInfo(
+                    "com.example.ahmedabodeif1.sun.app",
+                    PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                Log.d("here####", Base64.encodeToString(md.digest(), Base64.DEFAULT));
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+
+        } catch (NoSuchAlgorithmException e) {
+
+        }
+
     }
 
     private void populateAutoComplete() {
@@ -292,6 +320,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             case R.id.button4:
                 startActivity(new Intent("android.intent.action.sign_up"));
                 break;
+            case R.id.fbLogin:
+                startActivity(new Intent(this,FacebookLogin.class));
+
         }
     }
 
