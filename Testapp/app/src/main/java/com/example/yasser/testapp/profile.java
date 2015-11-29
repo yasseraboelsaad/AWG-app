@@ -21,6 +21,7 @@ public class profile extends Fragment implements View.OnClickListener {
 
     public String passable;
     Button post;
+    Button button;
     EditText postBox;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -60,6 +61,9 @@ public class profile extends Fragment implements View.OnClickListener {
         super.onViewCreated(view, savedInstanceState);
         post = (Button) this.getActivity().findViewById(R.id.postBtn);
         post.setOnClickListener(this);
+        button = (Button) this.getActivity().findViewById(R.id.button);
+        button.setOnClickListener(this);
+
 
         postBox = (EditText)this.getView().findViewById(R.id.postBox);
 
@@ -83,6 +87,8 @@ public class profile extends Fragment implements View.OnClickListener {
             {
                 Log.v("aho aho aho = ",post.get(i));
             }*/
+        }else if(v.getId() == R.id.button){
+
         }
     }
 }

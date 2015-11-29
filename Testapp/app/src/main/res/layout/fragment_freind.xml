@@ -47,7 +47,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/postBox"
+                android:id="@+id/postBoxF"
                 android:text="Write a Post!"
                 android:layout_column="2" />
         </TableRow>
@@ -61,18 +61,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Post"
-                android:id="@+id/postBtn"
+                android:id="@+id/postBtnF"
                 android:layout_column="2" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
+            android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
-                android:text="Friends"
-                android:id="@+id/button"
-                android:layout_column="2" />
         </TableRow>
 
     </TableLayout>
