@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/ahmedabodeif1/GitHub/AWG-app/Testapp/app/build/intermediates/res/merged/debug/menu/menu_facebook_login.xml",
+        "source": "/Users/ahmedabodeif1/GitHub/AWG-app/Testapp/app/src/main/res/menu/menu_facebook_login.xml"
+    },
+    {
+        "merged": "/Users/ahmedabodeif1/GitHub/AWG-app/Testapp/app/build/intermediates/res/merged/debug/menu/activity_main_drawer.xml",
+        "source": "/Users/ahmedabodeif1/GitHub/AWG-app/Testapp/app/src/main/res/menu/activity_main_drawer.xml"
+    },
+    {
+        "merged": "/Users/ahmedabodeif1/GitHub/AWG-app/Testapp/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/Users/ahmedabodeif1/GitHub/AWG-app/Testapp/app/src/main/res/menu/main.xml"
+    }
+]
