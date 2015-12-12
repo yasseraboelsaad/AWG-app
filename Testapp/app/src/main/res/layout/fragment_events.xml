@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="150dp"
+    android:padding="8dip" >
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="220dip"
+        android:layout_height="fill_parent"
+        android:contentDescription="TODO"
+        android:src="@drawable/opening"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/firstLine"
+        android:layout_alignEnd="@+id/firstLine"
+        android:cropToPadding="false" />
+
+    <TextView
+        android:id="@+id/thirdLine"
+        android:layout_width="fill_parent"
+        android:layout_height="26dip"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="On the 2nd of Dec."
+        android:textSize="14sp"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/icon"
+        android:layout_alignEnd="@+id/icon" />
+
+    <TextView
+        android:id="@+id/firstLine"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:gravity="center_vertical"
+        android:text="Opening Party"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attending?"
+        android:id="@+id/checkBox"
+        android:layout_alignBottom="@+id/icon"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+
+</RelativeLayout>
