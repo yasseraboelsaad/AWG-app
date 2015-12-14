@@ -4,3 +4,7 @@ db/development.sqlite3
 
 *.sqlite3
 log/development.log
+
+*.log
+
+Server/tmp/pids/server.pid
