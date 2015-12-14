@@ -54,6 +54,10 @@ public class FacebookLoginFragment extends Fragment {
                 mTextDetails.setText("Welcome   " + profile.getFirstName());
 
             }
+            accessToken = AccessToken.getCurrentAccessToken();
+            String s = accessToken.getToken();
+            System.out.print(s);
+
             startActivity(new Intent("android.intent.action.main2"));
 
 
